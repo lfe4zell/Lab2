@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="190dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/win" />
+
+    <TextView
+        android:id="@+id/outputLabel2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/win"
+        app:layout_constraintEnd_toEndOf="@+id/win"
+        app:layout_constraintStart_toStartOf="@+id/win"
+        app:layout_constraintTop_toBottomOf="@+id/scissorsB" />
+
+    <TextView
+        android:id="@+id/win"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/score"
+        app:layout_constraintEnd_toEndOf="@+id/score"
+        app:layout_constraintStart_toStartOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@+id/outputLabel2" />
+
+    <Button
+        android:id="@+id/rockB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="rockBtnClick"
+        android:text="@string/rock"
+        app:layout_constraintBottom_toTopOf="@+id/paperB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/paperB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:onClick="paperBClick"
+        android:text="@string/paper"
+        app:layout_constraintBottom_toTopOf="@+id/scissorsB"
+        app:layout_constraintStart_toStartOf="@+id/rockB"
+        app:layout_constraintTop_toBottomOf="@+id/rockB" />
+
+    <Button
+        android:id="@+id/scissorsB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:onClick="scissorBClick"
+        android:text="@string/scissors"
+        app:layout_constraintBottom_toTopOf="@+id/outputLabel2"
+        app:layout_constraintStart_toStartOf="@+id/paperB"
+        app:layout_constraintTop_toBottomOf="@+id/paperB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
